@@ -72,5 +72,7 @@ for ray in range(ray_amount):
                 index += 6
         
         angle_lookup_table = angle_lookup_table + f"{{{index}}}, "
+
+    angle_lookup_table = angle_lookup_table + "\n"
         
 angle_lookup_table = angle_lookup_table + f"}}"
