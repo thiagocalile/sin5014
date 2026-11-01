@@ -6,7 +6,7 @@
 void make_histogram(uint8_t *image, Histogram *return_histogram) {
   for (size_t row = 0; row < IMAGE_HEIGHT; row++) {
     for (size_t column = 0; column < IMAGE_WIDTH; column++) {
-      return_histogram->histogram[image[(row * IMAGE_HEIGHT)+ column]]++;
+      return_histogram->histogram[image[(row * IMAGE_WIDTH) + column]]++;
     }
   }
 }
