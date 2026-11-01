@@ -1,3 +1,6 @@
+#ifndef HISTOGRAM_H
+#define HISTOGRAM_H
+
 #include <stdint.h>
 
 #include "image.h"
@@ -10,3 +13,5 @@ typedef struct {
 void make_histogram(uint8_t *image, Histogram *return_histogram);
 
 void make_cdf(Histogram* histogram);
+
+#endif
