@@ -17,5 +17,6 @@ void make_cdf(Histogram *histogram) {
   do {
     running_total += histogram->histogram[color];
     histogram->cumulative_distribution[color] = running_total;
+    color++;
   } while (color <= MAX_COLOR);
 }

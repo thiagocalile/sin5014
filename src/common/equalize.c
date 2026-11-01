@@ -8,7 +8,7 @@
 
 void mean_equalize(uint8_t *image, Histogram *histogram) {
 
-  uint8_t lookup_table[MAX_COLOR];
+  uint8_t lookup_table[MAX_COLOR + 1];
   size_t index;
   
   for (size_t color = 0; color <= MAX_COLOR; color++) {
