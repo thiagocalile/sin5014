@@ -26,14 +26,11 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    Histogram hist = {0}; 
-    
-    // Assuming you have a function to populate the histogram first
-    // build_histogram(image_data, &hist);
-
-    // Call your exact signature
+    Histogram hist = {0};
+    make_histogram(image_data, &hist);
+    make_cdf(&hist);
     mean_equalize(image_data, &hist);
-
+    
     stbi_write_jpg("equalized_output.jpg", IMAGE_WIDTH, IMAGE_HEIGHT, 1, image_data, 95);
 
     stbi_image_free(image_data);
